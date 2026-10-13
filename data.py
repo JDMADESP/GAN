@@ -23,7 +23,10 @@ def get_dataloader(batch_size=100):
     convert to tesnors and pass it to DataLoader to have
     ready for training
     """
-    dataset = datasets.MNIST(root="data", train=True, download=True, transform=transforms.ToTensor())
+    dataset = datasets.MNIST(root="data", train=True, download=True, transform=transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize((0.5,), (0.5,)),
+]))
     loader = DataLoader(dataset, batch_size=batch_size, shuffle=True, drop_last=True)
     return loader
 
