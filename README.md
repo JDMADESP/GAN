@@ -59,9 +59,3 @@ MNIST downloads automatically the first time. Generated images are saved to `sam
 - GANs fail quietly. Nothing crashes, the numbers just drift, so you have to check what the model is actually producing.
 - The two networks need to stay balanced. If one gets too strong, neither learns.
 - Small details in a paper, like activation functions, can decide whether training works at all.
-
-## Next up
-
-- Figure out whether LeakyReLU or tanh was the real fix
-- Recreate the paper's "morphing between digits" figure
-- Next paper: ResNet
